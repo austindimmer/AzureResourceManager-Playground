@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>412b5ece-b512-4513-afd3-545267c6e761</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkIdentifier>Deployment</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>1.0</TargetFrameworkVersion>
+    <PrepareForBuildDependsOn>
+    </PrepareForBuildDependsOn>
+  </PropertyGroup>
+  <Import Condition=" Exists('Deployment.targets') " Project="Deployment.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- vertag<:>start tokens<:>maj.min -->
+  <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
+  <!-- vertag<:>end -->
+  <ItemGroup>
+    <Folder Include="Tools\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\CustomersDB.bacpac" />
+    <Content Include="Templates\Components\sqlGeoReplicated.json" />
+    <Content Include="Templates\Components\sqlGeoReplicated.parameters.json" />
+    <None Include="Deployment.targets">
+      <Visible>False</Visible>
+    </None>
+    <Content Include="Deploy-AzureResourceGroup.ps1" />
+    <None Include="Templates\azureDeploy.json" />
+    <None Include="Templates\azureDeploy.parameters.json" />
+    <None Include="Templates\Components\redisCacheAppServiceSql.json" />
+    <None Include="Templates\Components\redisCacheAppServiceSql.parameters.json" />
+    <None Include="Templates\Components\redisCacheAppServiceSqlMetadata.json" />
+    <None Include="Templates\Components\redisCacheAppServiceSqlREADME.md" />
+    <None Include="Templates\Components\redicCache.json" />
+    <None Include="Templates\Components\redicCache.parameters.json" />
+    <None Include="Templates\Components\redicCacheMetadata.json" />
+    <None Include="Templates\Components\redicCacheREADME.md" />
+    <None Include="Templates\Components\trafficManagerWebApp.json" />
+    <None Include="Templates\Components\trafficManagerWebApp.parameters.json" />
+    <None Include="Templates\Components\keyVaultCreateSecret.json" />
+    <None Include="Templates\Components\keyVaultCreateSecret.parameters.json" />
+    <None Include="Templates\Components\keyVaultCeate.json" />
+    <None Include="Templates\Components\keyVaultCeate.parameters.json" />
+    <None Include="Templates\Components\keyVaultCeateMetadata.json" />
+    <None Include="Templates\Components\keyVaultCeateREADME.md" />
+    <None Include="Templates\Components\keyVaultCreateSecretMetadata.json" />
+    <None Include="Templates\Components\keyVaultCreateSecretREADME.md" />
+    <None Include="Templates\Components\trafficManagerWebAppMetadata.json" />
+    <None Include="Templates\Components\trafficManagerWebAppREADME.md" />
+    <None Include="Templates\Components\trafficManagerExternalEndpoint.json" />
+    <None Include="Templates\Components\trafficManagerExternalEndpoint.parameters.json" />
+    <None Include="Templates\Components\trafficManagerExternalEndpointMetadata.json" />
+    <None Include="Templates\Components\trafficmanagerExternalEndpointREADME.md" />
+    <None Include="Templates\Components\TrafficManagerExternalEndpoint.ps1" />
+    <None Include="Templates\Components\TrafficManagerWebApp.ps1" />
+  </ItemGroup>
+  <Target Name="GetReferenceAssemblyPaths" />
+</Project>

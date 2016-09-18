@@ -31,6 +31,7 @@
       <Visible>False</Visible>
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
+    <None Include="NewKeyVaultForAzureRMTemplateDeployment.ps1" />
     <None Include="shared\networkInterface.json" />
     <None Include="shared\publicIP.json" />
     <None Include="shared\storageAccount.json" />
